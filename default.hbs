@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+	<title>{{meta_title}}</title>
+	<meta name="description" content="{{meta_description}}" />
+
+	<meta name="HandheldFriendly" content="True" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+	<link rel="stylesheet" type="text/css" href="{{asset "css/dependencies.css"}}" />
+	<link rel="stylesheet" type="text/css" href="{{asset "css/style.css"}}" />
+
+	{{ghost_head}}
+</head>
+
+<body class="{{body_class}}">
+	<section id="wrapper">
+		<div id="ajax-container">
+			<nav id="nav" class="nav">
+				<div class="nav-logo">
+					<a href="{{@blog.url}}">
+						{{#if @blog.logo}}
+						<img src="{{@blog.logo}}" alt="Logo" /><span class="name">在田信息技术有限公司</span>
+						{{else}}
+						<span class="name">{{@blog.title}}</span>
+						{{/if}}
+						
+					</a>
+				</div>
+				<div class="nav-menu">
+                    <a class="site" href="http://www.boostfield.com/#service">业务</a>
+                    <a class="site" href="http://www.boostfield.com/#us">团队</a>
+                    <a class="site" href="#">博客</a>
+                    <a class="site" href="http://www.boostfield.com/#contact">联系我们</a>
+                    <a class="site" href="http://blog.boostfield.com/tag/zhao-pin/">加入我们</a>
+					{{#if @blog.navigation}}
+					<a class="menu" data-action="menu" data-target="menu"><i class="icon-menu"></i></a>
+					{{/if}}
+				</div>
+			</nav>			
+			{{{body}}}
+			<div id="body-class" style="display: none;" class="{{body_class}}"></div>
+			<footer id="footer">
+				<section class="credits">
+                    <!--
+					<span class="credits-theme">Theme <a href="https://github.com/zutrinken/bleak" target="_blank" rel="nofollow">Bleak</a> edited by <a href="#" target="_blank" rel="nofollow">Boostfield</a></span>
+					<span class="credits-software">Published with <a href="http://ghost.org" target="_blank" rel="nofollow">Ghost</a></span>
+
+					<div style="clear:both;"></div>
+					-->
+
+                    <div class="statistics"></div>
+                    <div class="custom-footer" >
+                        <div class="custom-menu">
+                            <a href="http://blog.boostfield.com/tag/an-li/">案例</a> ·
+                            <a href="http://blog.boostfield.com/tag/he-xin-jie-zhi-guan/">核心价值</a> ·
+                            <a href="http://blog.boostfield.com/2016/03/01/guan-yu-wo-men/">关于我们</a> ·
+                            <a href="http://blog.boostfield.com/tag/ji-shu/">技术分享</a>
+                        </div>
+
+                        <span style="display: inline">闽ICP备14005334号-2</span>
+
+                    </div>
+
+				</section>
+			</footer>	
+	{{#if @blog.navigation}}
+			{{navigation}}
+			{{/if}}
+		</div>
+	</section>
+	{{ghost_foot}}
+	
+	<script type="text/javascript" src="{{asset "js/dependencies.js"}}"></script>
+	<script type="text/javascript" src="{{asset "js/script.js"}}"></script>
+</body>
+</html>
