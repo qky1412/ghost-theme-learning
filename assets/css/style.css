@@ -1333,7 +1333,8 @@ body {
    Custom-footer
    ========================================================================== */
 .custom-footer .custom-menu {
-  margin: 40px;
+  color: white;
+  margin: 4em 4em 4em 4em;
   font-size: 1rem;
   line-height: 150%; }
 .custom-footer .custom-menu a {
@@ -1395,5 +1396,28 @@ body {
 }
 .post-footer {
   margin-bottom: 8em;
+}
+#footer .custom-footer .custom-menu a{
+  color: white !important;
+  font-size: 1.1rem;
+  font-family: 'Helvetica Neue',Helvetica,STHeiti,'Microsoft YaHei',Arial,Verdana,sans-serif;
+}
+#footer .custom-footer .custom-menu a:hover {
+  color: #6173F4 !important;
+}
+#footer > section > div.custom-footer > ul {
+  width: 20%;
+  padding: 0.75em 2em;
+  font-size: 1rem !important;
+  font-family: 'Helvetica Neue',Helvetica,STHeiti,'Microsoft YaHei',Arial,Verdana,sans-serif;
+  border: solid 0.5px;
+  border-radius: 0.35em;
+  box-shadow: inset 0px 0px 1px 1px rgba(255, 255, 255, 0.05);
+  color: rgba(255, 255, 255, 0.25);
+}
+@media only screen and (max-width: 50em) {
+  #footer > section > div.custom-footer > ul {
+    width: 100%;
+  }
 }
 /*# sourceMappingURL=style.css.map */
