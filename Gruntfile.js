@@ -51,7 +51,7 @@ module.exports = function(grunt) {
         sass: {
             dev: {
                 options: {
-                    sourceMaps: true
+                    sourceMaps: false
                 },
                 files: {
                     'assets/<%=  config.cssTargetDir %>/style.css': '<%=  config.cssSrcDir %>/style.scss'
